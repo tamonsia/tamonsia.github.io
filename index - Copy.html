@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html ng-app='Mainapp' xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no" />
+
+
+
+        <base href="/">
+    <script>
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        //Fix for mobile safari strech bug
+        //if (!navigator.userAgent.match(/iPhone/g) || navigator.userAgent.match(/CriOS/g)) {
+      //  if (width > 980) {
+        //    var meta = document.createElement('meta');
+       //     meta.name = 'viewport';
+        //    meta.content = "width=device-width, initial-scale=1.0";
+          //  document.getElementsByTagName('head')[0].appendChild(meta);
+       // }
+        //}
+    </script>
+    <link href="Content/animate.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-rtl.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.3.js"></script>
+    <!--<script src="Scripts/jquery-1.9.1.min.js"></script>-->
+    <!--<script src="Scripts/jquery-1.10.1.min.js"></script>-->
+
+    <link href="Content/wolf/assets/owl.carousel.css" rel="stylesheet" />
+    <script src="Content/wolf/owl.carousel.min.js"></script>
+
+    <!--<link href="Content/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="Content/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="Content/owl-carousel/owl.transitions.css" rel="stylesheet" />
+    <script src="Content/owl-carousel/owl.carousel.min.js"></script>-->
+    <!--<link href="Content/set1.css" rel="stylesheet" />-->
+    <link href="Content/SlickNav-master/dist/slicknav.min.css" rel="stylesheet" />
+    <script src="Content/SlickNav-master/dist/jquery.slicknav.min.js"></script>
+
+    <link href="Content/hover-min.css" rel="stylesheet" />
+
+    <link href="Content/mainSH.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <!--<script src="Scripts/angular-animate.min.js"></script>-->
+
+    <script src="Scripts/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="model/Main.js"></script>
+    <script src="model/app.js"></script>
+    <script async src="Scripts/bootstrap.js"></script>
+    <link href="Content/Alef/stylesheet.css" rel="stylesheet" />
+
+    <!--<meta style="visibility: hidden;display: block">
+    פלדנקרייז תל אביב, פלדנקרייז צהלה, תמי קולנשר , פלדנקרייז
+    <meta />-->
+
+    <link rel="shortcut icon" href="Content/Photos/icon.png" type="image/png">
+
+    <title>תמי קולנשר פלדנקרייז - צהלה</title>
+</head>
+<body ng-controller='MainControler'>
+    <div id="Maindiv">
+        <div class="scaledText layout-row-space-between-center" style=" min-width: 978px; width: 99%;">
+            <h2 style="font-weight: 600;" class=" darkRed"> תמי קולנשר שיעורים בשיטת פלדנקרייז</h2>
+            <a href="/home"><img id="icon" src="Content/Photos/פלדנקרייז-צהלה.png" /></a>
+        </div>
+
+        <div id="menu" class="smallerScaledText darkRed">
+            <a href="/home" ng-class="{'active':isThisPage('/home')}" class="hvr-float-shadow smallSeparator-left btn btn-default ">פלדנקרייז</a>
+            <a href="/feldenkrais-method" ng-class="{'active':isThisPage('/feldenkrais-method')}" class="hvr-float-shadow smallSeparator-left btn btn-default ">עקרונות השיטה</a>
+            <a href="/feldenkrais-sessions" ng-class="{'active':isThisPage('/feldenkrais-sessions')}" class="hvr-float-shadow smallSeparator-left btn btn-default ">שיעורי פלדנקרייז</a>
+            <a href="/about" ng-class="{'active':isThisPage('/about')}" class="hvr-float-shadow smallSeparator-left btn btn-default">אודות תמי קולנשר</a>
+            <a class="hvr-float-shadow smallSeparator-left btn btn-default" ng-click="enlargeContactArea('enlargeContact', 'contact','/home')" href="/home">צור קשר</a>
+        </div>
+        <ul id="mobileMenu">
+            <li><a href="/home">פלדנקרייז</a></li>
+            <li><a href="/feldenkrais-method">עקרונות השיטה</a></li>
+            <li><a href="/feldenkrais-sessions">שיעורי פלדנקרייז</a></li>
+            <li><a href="/about">אודות תמי קולנשר</a></li>
+            <li><a ng-click="enlargeContactArea('enlargeContact', 'contact','/home')" href="/home">צור קשר</a></li>
+        </ul>
+
+        <div style="margin-top: 3px" ng-view></div>
+    </div>
+
+    <footer ng-if="!isRouteLoading" class="footer smallerScaledText">
+        <p>
+            <a class="largeSeparator-left" href="/home">פלדנקרייז בצהלה</a>
+            <a class="largeSeparator-left" href="/feldenkrais-sessions">שיעורי פלדנקרייז</a>
+            <a class="largeSeparator-left" href="/feldenkrais-method">שיטת פלדנקרייז</a>
+            <a class="largeSeparator-left" href="/about">על עצמי</a>
+            <a class="largeSeparator-left" ng-click="enlargeContactArea('enlargeContact', 'contact','/home')" href="/home">צור קשר</a>
+        </p>
+        <div style="opacity: 0.3">כל הזכויות שמורות לתמי קולנשר ©</div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
+

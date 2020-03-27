@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://www.feldenkrais-tami.co.il/sitemap.xml
