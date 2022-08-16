@@ -7,6 +7,18 @@
 
 
         <base href="/">
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<script>
+// optional init
+  window.onload = function() {
+    window.micAccessTool = new MicAccessTool({
+      link: 'http://feldenkrais-tami.co.il/accessibility-statement_2022-07-16.html',
+      contact: 'mailto:tamonsia@gmail.com',
+      buttonPosition: 'right', // default is 'left'
+      forceLang: 'he-IL' // default is 'en' may be 'he-IL', 'ru-RU', or 'fr_FR'
+    });
+  }
+</script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162799290-1"></script>
 <script>
